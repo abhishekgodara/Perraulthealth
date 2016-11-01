@@ -44,6 +44,7 @@ public class Consumerhome extends FragmentActivity implements OnMapReadyCallback
         LatLng newdelhi = new LatLng(28.5272181, 77.0688991);
         mMap.addMarker(new MarkerOptions().position(newdelhi).title("Marker in New Delhi"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(newdelhi));
+        mMap.setMyLocationEnabled(true);
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -54,8 +55,5 @@ public class Consumerhome extends FragmentActivity implements OnMapReadyCallback
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-
-        mMap.setMyLocationEnabled(true);
-
     }
 }
